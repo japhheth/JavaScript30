@@ -33,7 +33,9 @@
       filter: blur(var(--blur));
       background-color: var(--base);
     }
-
+    .hl{
+      color: var(--base);
+    }
     /*
       misc styles, nothing to do with CSS variables
     */
@@ -57,6 +59,14 @@
   </style>
 
   <script>
+    const inputs = document.querySelectorAll('.controls input');
+
+    function appendAction(){
+      console.log(this.value);
+    }
+
+    inputs.forEach(input => input.addEventListener('change', appendAction)); 
+    inputs.forEach(input => input.addEventListener('mousemove', appendAction)); 
   </script>
 
 </body>
