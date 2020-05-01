@@ -18,28 +18,61 @@
     }
 
     // Regular
+    console.log('hello world');
 
     // Interpolated
+    console.log('Hello, i am a %s hahahaha', 'boy');
 
     // Styled
+    console.log('%c hey, i am about to become bigger ', 'font-size:30px; background-color:red');
 
     // warning!
+    console.warn('Hey i am warning you OJ');
 
     // Error :|
+    console.error('tana ! i am an error message');
 
     // Info
+    console.info('Monekys are not developers please !',);
 
     // Testing
-
+    const p = document.querySelector('p')
+   console.assert(p.classList.contains('woooof'), "there is error here ");
+   console.assert(1 === "1", "Error dey here o")
     // clearing
+    console.clear();
 
     // Viewing DOM Elements
+    console.log(p);
+    console.dir(p)
 
     // Grouping together
+    dogs.forEach(e => {
+      console.groupCollapsed(`${e.name}  ${e.age }`)
+      console.log(`hello ${e.name} you are ${e.age} old`)
+      console.log(`hello ${e.name} you are ${e.age} old and that is great`);
+      console.groupEnd(`${e.name} ${e.age}`)
+    })
 
     // counting
+    console.count("chicken")
+    console.count("Monkey");
+    console.count("Monkey")
+    console.count("chicken")
+    console.count("Monkey")
+    console.count("chicken")
+    console.count("chicken")
+    console.count("Monkey")
+    console.count("chicken")
 
     // timing
+    console.time('fetched data');
+    fetch('https://api.github.com/users/japhheth')
+    .then(data => data.json())
+    .then(res => {
+      console.timeEnd('fetched data')
+      console.table(res);
+    })
 
   </script>
 </body>
